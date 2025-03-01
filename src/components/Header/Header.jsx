@@ -52,7 +52,7 @@ const Header = () => {
                     <TwitterIcon sx={{ color: '#00acee' }} />
                 </IconButton>    
             </div>
-            <button className="header-btn"><a href="/RahulRaman_Budaraju_resume.pdf" download="rahulraman_resume.pdf">Download CV</a></button>
+            <button className="header-btn"><a href="/Rahul_Raman_Budaraju_Resume_pdf.pdf" download="rahulraman_resume.pdf">Download CV</a></button>
         </div>
         <div className="header-image">
             <img  className="drop-animation" src={assets.profile} alt="" />

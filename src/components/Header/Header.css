@@ -68,6 +68,8 @@
         align-items: center;
         gap: 50px;
         margin-top: 50px;
+        position: relative;
+        padding-bottom: 80px; /* Added space for the button */
     }
 
     .header-heading h2,
@@ -82,11 +84,13 @@
         display: flex;
         justify-content: center;
     }
-    .social-media-icons{
+
+    .social-media-icons {
         justify-content: center;
     }
-    .header-contents button{
-        margin : 0 auto;
+
+    .header-contents button {
+        margin: 0 auto;
     }
 
     .header-image img {
@@ -100,7 +104,10 @@
 
     .header-btn {
         order: 2;
-        
+        position: absolute;
+        bottom: 20px; /* Adjust spacing */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -109,14 +116,17 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        position: relative;
+        padding-bottom: 80px;
     }
 
     .header-heading h2,
     .header-contents h1 {
         text-align: center;
     }
-    .header-contents p{
-        text-align : start;
+
+    .header-contents p {
+        text-align: start;
     }
 
     .header-image {
@@ -137,15 +147,22 @@
 
     .header-btn {
         order: 2;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 720px) {
     .header {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        position: relative;
+        padding-bottom: 100px;
     }
+
     .header-heading h2,
     .header-contents h1,
     .header-contents p {
@@ -175,10 +192,28 @@
     }
 
     .header-btn {
-        padding: 8px 20px;
+        padding: 10px 25px;
         font-size: 14px;
-        margin: 20px auto;
+        margin: 40px auto 20px auto;
         order: 2;
-        
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
+
+/* Hamburger Menu Pop-up */
+/* .hamburger-menu {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    max-width: 400px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+} */
