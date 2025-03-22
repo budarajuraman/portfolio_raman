@@ -12,7 +12,7 @@ const Projects = () => {
         <div className="project-display-list">
           {
             project_list.map((project)=>{
-              return <ProjectItem key={project.id} name={project.title} image={project.img} g_url={project.git_view} l_url={project.Live_view} />
+              return <ProjectItem key={project.id} name={project.title} image={project.img} g_url={project.git_view} about={project.description} />
             })
           }
         </div>

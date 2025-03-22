@@ -1,20 +1,38 @@
-import React from 'react'
-import './ProjectItem.css'
+import React, { useState } from 'react';
+import './ProjectItem.css';
 
-const ProjectItem = ({name,image,g_url,l_url}) => {
+const ProjectItem = ({ name, image, g_url, about }) => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
     <div className="project-card">
-        <img src={image} alt="" />
-        <div className="project-item-contents">
-            <h2>{name}</h2>
-        </div>
-        <div className="project-demo-btn">
-            <button className="btn-1"><a href={g_url}>GitHub</a></button>
-            {/* <button className="btn-2"><a href={l_url}>View Demo</a></button> */}
-        </div>
+      <img src={image} alt={name} />
+      <div className="project-item-contents">
+        <h2>{name}</h2>
+      </div>
       
-    </div>
-  )
-}
+      <div className="project-demo-btn">
+        <button className="btn-1">
+          <a href={g_url} target="_blank" rel="noopener noreferrer">GitHub</a>
+        </button>
+        <button className="btn-2" onClick={togglePopup}>About</button>
+      </div>
 
-export default ProjectItem
+      {showPopup && (
+        <div className="popup-overlay" onClick={togglePopup}>
+          <div className="popup-card" onClick={(e) => e.stopPropagation()}>
+            <h3>{name}</h3>
+            <p>{about}</p>
+            <button className="close-btn" onClick={togglePopup}>Close</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ProjectItem;

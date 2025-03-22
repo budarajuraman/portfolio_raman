@@ -12,7 +12,7 @@ const About = () => {
         <div className="about-contents">
             <div>
                 <h1>About <span>Me</span></h1>
-                <h2>Frontend Developer!</h2>
+                <h2>Full Stack Developer !</h2>
             </div>
             <div className="about-description">
                 <p>I am Rahul Raman, currently pursuing a Bachelor of Engineering in Electronics and Communication Engineering. I am passionate about web development, both frontend and backend, and I am actively seeking opportunities in this field. My enthusiasm for web development drives me to constantly learn and improve my skills, ensuring that I stay up-to-date with the latest technologies and best practices.</p>
